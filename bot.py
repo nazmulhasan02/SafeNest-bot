@@ -1,7 +1,8 @@
+import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 
-TOKEN = "Your token here"
+TOKEN = os.getenv("BOT_TOKEN")
 
 # 🧠 memory store (user-wise history)
 user_history = {}
